@@ -1,0 +1,448 @@
+/*
+Theme Name: Ultras
+Theme URI: https://templatesjungle.com/
+Author: TemplatesJungle
+Author URI: https://templatesjungle.com/
+Description: Ultras is specially designed product packaged for eCommerce store websites.
+Version: 1.1
+*/
+
+/*--------------------------------------------------------------
+This is main CSS file that contains custom style rules used in this template
+--------------------------------------------------------------*/
+
+/*------------------------------------*\
+    Table of contents
+\*------------------------------------*/
+
+/*------------------------------------------------
+
+CSS STRUCTURE:
+
+1. VARIABLES
+
+2. GENERAL TYPOGRAPHY
+  2.1 General Styles
+  2.2 Floating & Alignment
+  2.3 Forms
+  2.4 Lists
+  2.5 Code
+  2.6 Tables
+  2.7 Spacing
+  2.8 Utilities
+  2.9 Misc
+    - Row Border
+    - Zoom Effect
+  2.10 Buttons
+    - Button Sizes
+    - Button Shapes
+    - Button Color Scheme
+    - Button Aligns
+  2.11 Section
+    - Hero Section
+    - Section Title
+    - Section Paddings
+    - Section Margins
+    - Section Bg Colors
+    - Content Colors
+    - Content Borders
+
+3. EXTENDED TYPOGRAPHY
+  3.1 Blockquote / Pullquote
+  3.2 Text Highlights
+
+4. CONTENT ELEMENTS
+  4.1 Tabs
+  4.2 Accordions
+
+5. BLOG STYLES
+  5.1 Blog Single Post
+  5.2 About Author
+  5.3 Comments List
+  5.4 Comments Form3
+
+6. SITE STRUCTURE
+  6.1 Header
+    - Header Menu
+    - Nav Sidebar
+  6.2 Billboard
+  6.3 About Us Section
+  6.4 Video Section
+  6.5 Selling Products Section
+  6.6 Quotation Section
+  6.7 Latest Blogs Section
+  6.8 Newsletter Section
+  6.9 Instagram Section
+  6.10 Footer
+    - Footer Top
+    - Footer Bottom
+
+7. OTHER PAGES
+  7.1 About Page
+  7.2 Product Detail
+    -Quantity
+  7.3 Shop Page & Blog Page
+    -Sidebar
+    -Pagination
+  7.4 Shop List Page
+  7.5 Single Product
+   -Single Product Information
+   -Product Tabs
+  7.6 Single Post Page
+  7.7 Cart Page
+  7.8 Wishlist Page
+  7.9 Checkout Page
+  7.10 Home2 Page
+   -Billboard
+   -Video Section
+   -Categories
+  7.11 Coming Soon Page
+  7.12 Login Page
+  7.13 Error Page
+  7.14 Styles Page
+
+    
+/*--------------------------------------------------------------
+/** 1. VARIABLES
+--------------------------------------------------------------*/
+:root {
+    /* widths for rows and containers
+     */
+    --header-height       : 160px;
+    --header-height-min   : 80px;
+}
+/* on mobile devices below 600px
+ */
+@media screen and (max-width: 600px) {
+    :root {
+        --header-height : 100px;
+        --header-height-min   : 80px;
+    }
+}
+/* Theme Colors */
+:root {
+    --accent-color       : #8d8d8d;
+    --dark-color         : #191919;
+    --light-color        : #fff;
+    --grey-color         : #dbdbdb;
+    --light-grey-color   : #fafafa;
+    --primary-color      : #6995B1;
+    --light-primary-color   : #eef1f3;
+}
+
+/* Fonts */
+:root {
+    --body-font           : "Inter", sans-serif;
+    --heading-font        : "Inter", sans-serif;
+}
+
+
+/*----------------------------------------------*/
+/* 2 GENERAL TYPOGRAPHY */
+/*----------------------------------------------*/
+
+/* 2.1 General Styles
+/*----------------------------------------------*/
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--body-font);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 2;
+  color: var(--accent-color);
+  margin: 0;
+}
+body.no-scroll {
+    overflow: hidden;
+}
+a {
+  color: var(--dark-color);
+  text-decoration: none;
+  transition: 0.3s color ease-out;
+}
+p>a {
+  color: var(--primary-color);
+}
+a.light {
+  color: var(--light-color);
+}
+a:hover {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  outline: 0;
+}
+figure {
+  margin: 0;
+}
+img {
+  display: inline-block;
+  border: 0;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+::selection {
+  background: var(--primary-color);
+  color: var(--light-color);
+  text-shadow: none;
+}
+::-moz-selection {
+  background: var(--primary-color);
+  color: var(--light-color);
+  text-shadow: none;
+}
+
+::-webkit-input-placeholder {
+    color: #7A7A7A; /* WebKit browsers */
+}
+:-ms-input-placeholder {
+    color: #7A7A7A;/* Internet Explorer 10+ */
+}
+
+/* Typography */
+/*----------------------------------------------*/
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: var(--heading-font);
+  color: var(--dark-color);
+  line-height: 1.2;
+}
+h1.light, .h1, h2.light, .h2, h3.light, .h3, h4.light, .h4, h5.light, .h5, h6.light, .h6 {
+  color: var(--light-color);
+}
+h1, h2, h3 {
+  margin: 25px 0;
+  text-transform: capitalize;
+}
+h5, h6 {
+  letter-spacing: 1px;
+}
+h1, .h1 {
+  font-size: 3em;
+  line-height: 1.4;
+}
+h2, .h2 {
+  font-size: 2em;
+  line-height: 1.4;
+}
+h3, .h3 {
+  font-size: 1.4em;
+  line-height: 1.4;
+}
+h4, .h4 {
+  font-size: 1.1em;
+  line-height: 1.4;
+}
+h5, .h5 {
+  font-size: .83em;
+  line-height: 1.25;
+}
+h6, .h6 {
+  font-size: .67em;
+  line-height: 1.1;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  font-weight: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+p {
+   font-family: var(--body-font);
+   font-size: 18px;
+   line-height: 1.8;
+   margin: 0 0 20px 0;
+}
+p.dark {
+    color: var(--dark-color);
+}
+p.light {
+    color: var(--light-color);
+}
+p:empty {
+  display: none;
+}
+small {
+  font-size: 85%;
+}
+mark {
+  background-color: var(--grey-color);
+  padding: 0.28rem;
+}
+dfn, cite, em, i {
+  font-style: italic;
+}
+::placeholder {
+    color: var(--grey-color);
+}
+
+/*----------------------------------------------*/
+/* 2.1 Floating & Alignment */
+/*----------------------------------------------*/
+
+.align-left {
+  float: left;
+  text-align: left;
+}
+.align-right {
+  float: right;
+  text-align: right;
+}
+.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+/**::after,*/
+.container::after,
+.row::after,
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+/** Text Align
+--------------------------------------------------------------*/
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-nowrap {
+  white-space: nowrap;
+}
+.text-lead {
+  font-size: 120%;
+  line-height: 1.7em;
+}
+.text-lead strong {
+  font-size: 115%;
+  font-weight: 500;
+}
+.text-muted {
+  color: var(--primary-color);
+}
+.text-primary {
+  color: var(--primary-color) !important;
+}
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+
+/*----- Latest Collection Section
+--------------------------------------------------------------*/
+.product-collection .collection-item {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.product-collection .product-entry {
+    position: absolute;
+    bottom: 30px;
+}
+.product-collection .left-content .product-entry {
+    right: 0;
+    bottom: 90px;
+}
+.product-collection .categories {
+    text-transform: uppercase;
+}
+.product-collection .product-entry h3.item-title {    
+    font-size: 4.4em;
+    line-height: 1;
+    font-weight: 900;
+}
+.product-collection .product-entry p {
+    width: 80%;
+}
+.product-collection .right-content h3.item-title {
+    font-size: 3.2em;
+    width: 80%;
+    margin: 0;
+}
+.product-collection .right-content .product-entry {
+    left: 60px;
+}
+
+@media screen and (max-width: 1200px) {
+  #latest-collection .right-content {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+  }
+}
+@media screen and (max-width: 991px) {
+  #latest-collection .right-content {
+      flex-wrap: wrap;
+  }
+  .product-collection .left-content .product-entry,
+  .product-collection .right-content .product-entry {
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 75%;
+  }
+  .product-collection .left-content h3.item-title {
+      font-size: 2.2em;
+  }
+}
+@media screen and (max-width: 767px) {
+  .product-collection .left-content .product-entry {
+      width: 100%;
+  }
+}
+.products-thumb {
+  position: relative; /* Ensure proper positioning for overlay */
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  z-index: 0; /* Ensure the overlay is behind the text */
+}
+
+.product-entry {
+  position: relative; /* Ensure proper positioning for text */
+  z-index: 1; /* Ensure the text is above the overlay */
+}
+
+.products-thumb img {
+  width: 100%;
+  height: auto;
+}
+#shoes {
+  width: 100%;
+  height: auto; /* Remove auto height */
+}
+
+
